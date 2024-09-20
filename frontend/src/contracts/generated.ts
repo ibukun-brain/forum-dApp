@@ -186,6 +186,13 @@ export const forumAbi = [
   },
   {
     type: 'function',
+    inputs: [{ name: '_user', internalType: 'address', type: 'address' }],
+    name: 'getPostsFromAddress',
+    outputs: [{ name: '', internalType: 'uint256[]', type: 'uint256[]' }],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
     inputs: [],
     name: 'pollIdIncrement',
     outputs: [{ name: '', internalType: 'uint256', type: 'uint256' }],
@@ -608,6 +615,15 @@ export const useReadForumGetPost = /*#__PURE__*/ createUseReadContract({
   abi: forumAbi,
   functionName: 'getPost',
 })
+
+/**
+ * Wraps __{@link useReadContract}__ with `abi` set to __{@link forumAbi}__ and `functionName` set to `"getPostsFromAddress"`
+ */
+export const useReadForumGetPostsFromAddress =
+  /*#__PURE__*/ createUseReadContract({
+    abi: forumAbi,
+    functionName: 'getPostsFromAddress',
+  })
 
 /**
  * Wraps __{@link useReadContract}__ with `abi` set to __{@link forumAbi}__ and `functionName` set to `"pollIdIncrement"`

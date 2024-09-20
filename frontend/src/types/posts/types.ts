@@ -16,7 +16,7 @@ export type readContractFn = Readonly<
 	| "getComment"
 	| "getCommentsFromPost"
 	| "getPoll"
-	//| "getPollFromPost"
+	| "getPollFromPost"
 	| "getPost"
 	| "getPostsFromAddress"
 	| "pollIdIncrement"

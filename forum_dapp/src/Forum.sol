@@ -88,6 +88,10 @@ contract Forum {
         return commentId;
     }
 
+    function getPostsFromAddress(address _user) public view returns (uint256[] memory) {
+        return userPosts[_user];
+    }
+
     function getPost(uint256 _postId) public view returns (Post memory) {
         require(_postId <= postIdIncrement, "Post does not exist!");
         return posts[_postId];
