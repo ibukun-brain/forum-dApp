@@ -1,5 +1,5 @@
 import type { Address } from "viem";
-import type { PostDetails } from "../types/posts/type";
+import type { PostDetails } from "../types/posts/types";
 import ShareablePostComponent from "./ShareablePostComponent";
 
 const Posts = ({

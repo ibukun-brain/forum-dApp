@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { PostDetails } from "../types/posts/type";
+import type { PostDetails } from "../types/posts/types";
 import styles from "../styles/Custom.module.css";
 import CommonVoteStubs from "./CommonVoteStubs";
 
